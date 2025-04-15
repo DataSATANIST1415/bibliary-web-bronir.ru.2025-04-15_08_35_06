@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.3rem;
+}
+
+header p {
+    margin-top: 0.15rem;
+    margin-bottom: 0.15rem;
+}
+
+nav {
+    background-color: #0056b3;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Добавлено для мобильных */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 135%;
+    font-weight: bold;
+    padding: 8px 12px; /* Добавлено для лучшего тапа */
+    display: block; /* Для заполнения всей области */
+    transition: all 0.3s ease; /* Плавные переходы */
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Вертикальное меню */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Вертикальные отступы */
+        width: 100%; /* Полная ширина */
+    }
+
+    nav ul li a {
+        font-size: 120%; /* Чуть уменьшенный размер */
+        padding: 10px 15px; /* Большие кликабельные области */
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+
+nav ul li a:hover {
+    color: #add8e6;
+    background-color: rgba(0,0,0,0.1); /* Легкий фон при ховере */
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: calc(100vh - 300px); /* Минимальная высота контента */
+}
+
+h1, h2, h3 {
+    color: #007bff;
+    margin-top: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+footer {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 40px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.company-info,
+.contact-info {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+
+.info-list li {
+    margin: 8px 0;
+    padding: 5px 0;
+}

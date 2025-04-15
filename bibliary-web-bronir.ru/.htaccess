@@ -1,0 +1,13 @@
+
+# Редирект с http на https
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+# Редирект на страницы детального описания продукта
+RewriteRule ^Izdelie([0-9]+)$ Izdelie$1.php [L]
+
+# Создание человекопонятных URL для страниц продукта
+RewriteRule ^product/([a-zA-Z0-9-]+)$ product.php?slug=$1 [QSA,L]
+
+# Пример дополнительного правила для перенаправления на другую страницу
+RewriteRule ^about$ about.html [L]

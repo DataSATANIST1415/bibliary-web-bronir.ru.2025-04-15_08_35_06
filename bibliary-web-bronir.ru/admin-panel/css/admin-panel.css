@@ -1,0 +1,19 @@
+
+
+/* Новый раздел */
+#newProductSectionContainer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+#newProductSectionContainer h2 {
+    color: #007bff;
+}
+
+#newProductSectionContainer h3 {
+    color: #0056b3;
+    margin-bottom: 15px;
+}

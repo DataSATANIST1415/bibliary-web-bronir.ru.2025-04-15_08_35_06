@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.3rem;
+}
+
+header p {
+    margin-top: 0.15rem;
+    margin-bottom: 0.15rem;
+}
+
+nav {
+    background-color: #0056b3;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Добавлено для мобильных */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 135%;
+    font-weight: bold;
+    padding: 8px 12px; /* Добавлено для лучшего тапа */
+    display: block; /* Для заполнения всей области */
+    transition: all 0.3s ease; /* Плавные переходы */
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Вертикальное меню */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Вертикальные отступы */
+        width: 100%; /* Полная ширина */
+    }
+
+    nav ul li a {
+        font-size: 120%; /* Чуть уменьшенный размер */
+        padding: 10px 15px; /* Большие кликабельные области */
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+
+nav ul li a:hover {
+    color: #add8e6;
+    background-color: rgba(0,0,0,0.1); /* Легкий фон при ховере */
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: calc(100vh - 300px); /* Минимальная высота контента */
+}
+
+h1, h2, h3 {
+    color: #007bff;
+    margin-top: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+footer {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 40px;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* Increased gap between cards */
+    margin-top: 20px;
+    margin-bottom: 40px; /* Increased margin at the bottom */
+}
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s ease; /* Add smooth transition for box-shadow */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #ffffff; /* Ensure background is white */
+    justify-content: space-between; /* Add space between elements */
+}
+.product-card:hover {
+    box-shadow: 0 0 15px rgba(0,123,255,0.3); /* Add subtle glow effect on hover */
+}
+.product-card img {
+    max-width: 280px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    min-width: 280px; /* Set minimum width */
+    min-height: 200px; /* Set minimum height */
+    margin: 0 auto; /* Center the image */
+    margin-bottom: 15px;
+}
+.product-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transition for background-color and transform */
+}
+.cta-button:hover {
+    background-color: #0056b3; /* Darken the button color on hover */
+    transform: scale(1.05); /* Slightly increase the size of the button on hover */
+}
